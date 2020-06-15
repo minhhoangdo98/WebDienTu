@@ -1,5 +1,5 @@
  <!-- main menu  navbar -->
-    <nav class="navbar navbar-default navbar-top" role="navigation" id="main-Nav" style="background-color: #16a085;margin-bottom: 5px;font-size: 13px;">
+    <nav class="navbar navbar-default navbar-top" role="navigation" id="main-Nav" style="background-color: #FE9A2E;margin-top: 5px;margin-bottom: 10px;font-size: 13px;">
       <div class="container">  
         <div class="row">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,13 +22,13 @@
             <ul class="nav navbar-nav">
               <li> <a href="{!!url('')!!}" title="" style="color: #FFFFFF;background-color: #2c3e50;"><b class="glyphicon glyphicon-home"></b> Trang chủ </a> </li>
               <li>
-                <a href="{!!url('mobile')!!}" >Điện Thoại </a>                          
+                <a href="{!!url('mobile')!!}" > Điện thoại </a>                          
               </li>                                                  
               <li >
                 <a href="{!!url('laptop')!!}" > Laptop </a>                
               </li>    
               <li>
-                <a href="{!!url('pc')!!}" > Máy Tính </a>                
+                <a href="{!!url('pc')!!}" > Pc gaming </a>                
               </li>                                          
               <li>
                <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
@@ -45,7 +45,7 @@
                       <thead>
                       <tr>
                         <th>Ảnh</th>
-                        <th>LS</th>
+                        <th>SL</th>
                         <th>Tên <SPAN></SPAN></th>
                         <th>Giá</th>
                       </tr>

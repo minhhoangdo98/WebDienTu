@@ -33,7 +33,7 @@
 									<thead>
 										<tr>
 											<th>ID</th>
-											<th> Họ-tên khách hàng</th>
+											<th>Họ-tên khách hàng</th>
 											<th>Địa chỉ</th>
 											<th>Điện thoại</th>
 											<th>Ngày đặt</th>
@@ -64,7 +64,7 @@
 											<th>Hình ảnh</th>
 											<th>Tên sản phẩm</th>
 											<th>Tóm tắt chức năng</th>
-											<th> Số lượng </th>
+											<th>Số lượng </th>
 											<th>Giá bán</th>
 											<th>Trạng thái</th>
 											<th>Action</th>

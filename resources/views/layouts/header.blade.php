@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{!!url('public/images/logo.png')!!}" alt="logo" width="50" height="20">
 
-    <title>Fshop : Hệ thông bán hàng trực tuyến SCODEWEB</title>
+    <title>AHKshop : Hệ  thống các sản phẩm Gaming</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{!!url('public/bootstrap/css/bootstrap.min.css')!!}" rel="stylesheet">

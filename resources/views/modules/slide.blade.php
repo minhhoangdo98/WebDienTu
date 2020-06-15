@@ -4,32 +4,22 @@
       <div class="camera_violet_skin" id="camera_wrap_1">
         <div data-thumb="{!!url('public/images/slides/thumbs/qc1.png')!!}" data-src="{!!url('public/images/slides/thumbs/qc1.png')!!}">
             <div class="camera_caption fadeFromBottom">
-                Sắm Apple giá tốt, Du lịch châu âu. <em>Event mua hàng Apple Tại Thế Giới Di Động</em>
+                Sắm mới của LG - LG gram 2020. <em>Khuyến mãi lên đến 3 triệu, nhanh tay lên nào</em>
             </div>
         </div>
-        <div data-thumb="{!!url('public/images/slides/thumbs/qc2.png')!!}" data-src="{!!url('public/images/slides/thumbs/qc2.png')!!}">
+        <div data-thumb="{!!url('public/images/slides/thumbs/qc2.jpg')!!}" data-src="{!!url('public/images/slides/thumbs/qc2.jpg')!!}">
             <div class="camera_caption fadeFromBottom">
-                Sony trả góp 0%, có cỏ hội trúng Tivi 4K <em> Dành cho sản phẩm sony Tại Thế Giới Di Động </em>
+                Điện thoại samsung <em>Khuyến mãi tất cả lên đến 2.5 triệu, nhanh tay lên nào</em>
             </div>
         </div>
-        <div data-thumb="{!!url('public/images/slides/thumbs/qc3.png')!!}" data-src="{!!url('public/images/slides/thumbs/qc3.png')!!}">
+        <div data-thumb="{!!url('public/images/slides/thumbs/qc3.jpg')!!}" data-src="{!!url('public/images/slides/thumbs/qc3.jpg')!!}">
             <div class="camera_caption fadeFromBottom">
-                Galaxy J7 Prime - mua online thêm quà, <em> Dành cho Galaxy J7 Prime Tại Thế Giới Di Động </em>
+                Iphone 12 sắp ra mắt <em>nhanh tay đăng ký - nhập quà liền tay</em>
             </div>
         </div>
         <div  data-thumb="{!!url('public/images/slides/thumbs/qc4.png')!!}" data-src="{!!url('public/images/slides/thumbs/qc4.png')!!}">
             <div class="camera_caption fadeFromBottom">
-                Galaxy J7 Prime - mua online thêm quà, <em> Dành cho Galaxy J7 Prime Tại Thế Giới Di Động </em>
-            </div>
-        </div>
-        <div data-thumb="{!!url('public/images/slides/thumbs/qc5.png')!!}" data-src="{!!url('public/images/slides/thumbs/qc5.png')!!}">
-            <div class="camera_caption fadeFromBottom">
-                 Galaxy J7 Prime - mua online thêm quà, <em> Dành cho Galaxy J7 Prime Tại Thế Giới Di Động </em>)
-            </div>
-        </div>
-        <div data-thumb="{!!url('public/images/slides/thumbs/qc6.jpg')!!}" data-src="{!!url('public/images/slides/thumbs/qc6.jpg')!!}">
-            <div class="camera_caption fadeFromBottom">
-               Đồng hành cùng lễ hội Hàn Quốc   <em> Khuyễn mãi tại siêu thị Nguyễn Kim</em>
+                Trọn bộ pc chơi game <em>Khuyến mãi chỉ còn 19.999.000 vnđ</em>
             </div>
         </div>
       </div><!-- #camera_wrap_1 -->       
