@@ -17,7 +17,7 @@
 
     <style>
         body {
-            font-family: 'Lato';
+            font-family: "Times New Roman";
         }
 
         .fa-btn {

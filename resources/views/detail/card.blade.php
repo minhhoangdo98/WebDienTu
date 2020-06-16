@@ -43,7 +43,7 @@
                   @foreach(Cart::content() as $row)
                     <tr>
                       <td>{!!$row->id!!}</td>
-                      <td><img src="{!!url('public/uploads/products/'.$row->options->img)!!}" alt="dell" width="80" height="50"></td>
+                      <td><img src="{!!url('uploads/products/'.$row->options->img)!!}" alt="dell" width="80" height="50"></td>
                       <td>{!!$row->name!!}</td>
                       <td class="text-center">                        
                           @if (($row->qty) >1)
@@ -123,7 +123,7 @@
             <div class="thumbnail mobile">              
               <div class="bt">
                 <div class="image-m pull-left">
-                  <img class="img-responsive" src="{!!url('public/uploads/products/'.$row->images)!!}" alt="{!!$row->name!!}">
+                  <img class="img-responsive" src="{!!url('uploads/products/'.$row->images)!!}" alt="{!!$row->name!!}">
                 </div>
                 <div class="intro pull-right">
                   <h1><small class="title-mobile">{!!$row->name!!}</small></h1>

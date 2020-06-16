@@ -2,9 +2,9 @@
 @section('content')
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h3 class="panel-title">
-      <span class="glyphicon glyphicon-home"><a href="{!!url('/')!!}" title=""> Home</a></span> 
+      <span class="glyphicon glyphicon-home" style="font-size: 18px;"><a href="{!!url('/')!!}" title="">Home</a></span> 
       <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span><a href="{!!url('/laptop')!!}" title=""> Laptop</a>
-      <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span> <a href="#" title="">{!!$slug!!}</a>
+      <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span> <a href="#" title="">{!!$data->name!!}</a>
     </h3>              
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 no-padding">              
       <div class="row">
@@ -19,14 +19,14 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                       <div class="img-box">
-                        <img class="img-responsive" src="{!!url('public/uploads/products/'.$data->images)!!}" alt="img responsive">
+                        <img class="img-responsive" src="{!!url('uploads/products/'.$data->images)!!}" alt="img responsive">
                       </div>
                       <div class="img-slide">
                         <div class="panel panel-default text-center">        
                           <div id="links">
                             @foreach($data->detail_img as $row)
                               <a href="{!!url('uploads/products/details/'.$row->images_url)!!}" title="{!!$data->name!!}" data-gallery>
-                                  <img src="{!!url('public/uploads/products/details/'.$row->images_url)!!}" alt="ả{!!$data->name!!}" width="30" height="40">
+                                  <img src="{!!url('uploads/products/details/'.$row->images_url)!!}" alt="ả{!!$data->name!!}" width="30" height="40">
                               </a>
                             @endforeach                              
                           </div>
@@ -71,18 +71,14 @@
                     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                       <div class="panel panel-info" style="margin: 0;">
                         <div class="panel-heading" style="padding:5px;">
-                          <h3 class="panel-title">Khuyễn mãi - Chính sách</h3>
+                          <h3 class="panel-title">Khuyễn mãi</h3>
                         </div>
                         <div class="panel-body">
                           <div class="khuyenmai">
-                            @if ($data->promo1!='')
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>{!!$data->promo1!!}</li>
-                            @elseif($data->promo2!='')
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>{!!$data->promo2!!}</li>
-                            @elseif ($data->promo3!='')
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>{!!$data->promo3!!}</li>
-                            @endif 
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>Cài đặt phần miềm, tải nhạc - ứng dụng miến phí</li>                                                       
+                            <li><span class="glyphicon glyphicon-ok-sign"></span> {!!$data->promo1!!}</li>                           
+                              <li><span class="glyphicon glyphicon-ok-sign"></span> {!!$data->promo2!!}</li>                  
+                              <li><span class="glyphicon glyphicon-ok-sign"></span> {!!$data->promo3!!}</li>                       
+                              <li><span class="glyphicon glyphicon-ok-sign"></span> Cài đặt phần miềm - ứng dụng miến phí</li>                                             
                           </div>                       
                         </div>
                       </div>
@@ -161,7 +157,7 @@
                       <div id="links">
                            @foreach($data->detail_img as $row)
                               <a href="{!!url('uploads/products/details/'.$row->images_url)!!}" title="{!!$data->name!!}" data-gallery>
-                                  <img src="{!!url('public/uploads/products/details/'.$row->images_url)!!}" alt="ả{!!$data->name!!}" width="23%" height="50%">
+                                  <img src="{!!url('uploads/products/details/'.$row->images_url)!!}" alt="ả{!!$data->name!!}" width="23%" height="50%">
                               </a>
                             @endforeach
                       </div>
@@ -246,6 +242,7 @@
                 ->join('pro_details', 'pro_details.pro_id', '=', 'products.id')
                 ->where('category.parent_id','=','2')
                 ->select('products.*','pro_details.cpu','pro_details.ram','pro_details.screen','pro_details.vga','pro_details.storage','pro_details.exten_memmory','pro_details.cam1','pro_details.cam2','pro_details.sim','pro_details.connect','pro_details.pin','pro_details.os','pro_details.note')
+                ->orderBy('products.created_at', 'desc')
                 ->paginate(2); 
 
         ?>
@@ -253,7 +250,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">           
             <div class="thumbnail">          
               <div class="hienthi">
-                <img class="img-responsive" src="{!!url('public/uploads/products/'.$row->images)!!}" alt="{!!$row->name!!}">
+                <img class="img-responsive" src="{!!url('uploads/products/'.$row->images)!!}" alt="{!!$row->name!!}">
                 <div class="caption">
                   <h1><small><strong class="title-pro">{!!$row->name!!}</strong></small></h1>
                   <p>    

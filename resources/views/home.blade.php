@@ -2,12 +2,26 @@
 @section('content')
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">   
         <!-- danh muc dien thoai -->
+        <div class="panel-heading">
+              <h3 class="panel-title text-left" style="font-size: 28px; color: #81DAF5;  border-radius: 25px; background-color: #E0F8F7; padding: 20px;  margin-left: -20px; margin-right: -20px;">Sản phẩm mới về</h3>
+            </div>
+        <h3 class="panel-title text-left" style="font-size: 22px; margin-left: 20px;color: #81DAF5; margin-top: 10px; margin-bottom: 10px; ; border-bottom: 2px solid #81DAF5;">Điện thoại</h3>
+        <?php 
+          $mobile = DB::table('products')
+                ->join('category', 'products.cat_id', '=', 'category.id')
+                ->join('pro_details', 'pro_details.pro_id', '=', 'products.id')
+                ->where('category.parent_id','=','1')
+                ->select('products.*','pro_details.cpu','pro_details.ram','pro_details.screen','pro_details.vga','pro_details.storage','pro_details.exten_memmory','pro_details.cam1','pro_details.cam2','pro_details.sim','pro_details.connect','pro_details.pin','pro_details.os','pro_details.note')
+                ->orderBy('products.created_at', 'desc')
+                ->paginate(4); 
+
+        ?>
         @foreach($mobile as $row)        
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding">
             <div class="thumbnail mobile">              
               <div class="bt">
                 <div class="image-m pull-left">
-                  <img class="img-responsive" src="{!!url('public/uploads/products/'.$row->images)!!}" alt="img responsive">
+                  <img class="img-responsive" src="{!!url('uploads/products/'.$row->images)!!}" alt="img responsive">
                 </div>
                 <div class="intro pull-right">
                   <h1><small class="title-mobile">{!!$row->name!!}</small></h1>
@@ -43,12 +57,23 @@
           </div>
 
         <!--========================== phan danh muc laptop   =========================================  -->
-          <div id="laptop"></div>
-          @foreach($laptop as $row)
+          <div id="laptop">
+          <h3 class="panel-title text-left" style="font-size: 22px; margin-left: 20px; margin-top: 10px; margin-bottom: 10px; color: #81DAF5; border-bottom: 2px solid #81DAF5;">Laptop</h3>
+          <?php 
+          $lap = DB::table('products')
+                ->join('category', 'products.cat_id', '=', 'category.id')
+                ->join('pro_details', 'pro_details.pro_id', '=', 'products.id')
+                ->where('category.parent_id','=','2')
+                ->select('products.*','pro_details.cpu','pro_details.ram','pro_details.screen','pro_details.vga','pro_details.storage','pro_details.exten_memmory','pro_details.cam1','pro_details.cam2','pro_details.sim','pro_details.connect','pro_details.pin','pro_details.os','pro_details.note')
+                ->orderBy('products.created_at', 'desc')
+                ->paginate(4); 
+
+        ?>
+          @foreach($lap as $row)
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding" >
             <div class="thumbnail">          
               <div class="hienthi">
-                <img class="img-responsive" src="{!!url('public/uploads/products/'.$row->images)!!}" alt="img responsive">
+                <img class="img-responsive" src="{!!url('uploads/products/'.$row->images)!!}" alt="img responsive">
                 <div class="caption">
                   <h1><small><strong class="title-pro">{!!$row->name!!}</strong></small></h1>
                   <p>    
@@ -89,19 +114,27 @@
           </div>
         @endforeach
         <div class="clearfix">
-          
         </div>
-          <a href="http://api.hostinger.vn/redir/1309904" target="_blank"> 
-            <img src="public/images/slides/thumbs/qc1.png" alt="Hosting Miễn Phí" border="0" width="100%" height="250" />
-          </a>
+          
 <!-- =============== danh muc may tinh ===================================== -->
-        <div id="pc"></div>
+        <div id="pc">
+        <h3 class="panel-title text-left" style="font-size: 22px; margin-left: 20px; margin-top: 10px; margin-bottom: 10px; color: #81DAF5; border-bottom: 2px solid #81DAF5;">Máy tính bàn</h3>
+        <?php 
+          $pc = DB::table('products')
+                ->join('category', 'products.cat_id', '=', 'category.id')
+                ->join('pro_details', 'pro_details.pro_id', '=', 'products.id')
+                ->where('category.parent_id','=','19')
+                ->select('products.*','pro_details.cpu','pro_details.ram','pro_details.screen','pro_details.vga','pro_details.storage','pro_details.exten_memmory','pro_details.cam1','pro_details.cam2','pro_details.sim','pro_details.connect','pro_details.pin','pro_details.os','pro_details.note')
+                ->orderBy('products.created_at', 'desc')
+                ->paginate(4); 
+
+        ?>
         @foreach($pc as $row)
            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
             <div class="thumbnail pc">              
               <div class="bt">
                 <div class="image-m pull-left">
-                  <img class="img-responsive" src="{!!url('public/uploads/products/'.$row->images)!!}" alt="img responsive">
+                  <img class="img-responsive" src="{!!url('uploads/products/'.$row->images)!!}" alt="img responsive">
                 </div>
                 <div class="intro pull-right">
                   <h1><small class="title-pc">{!!$row->name!!}</small></h1>
@@ -128,7 +161,13 @@
                 <a href="{!!url('gio-hang/addcart/'.$row->id)!!}" class="btn btn-success pull-right add">Thêm vào giỏ </a>
             </div> <!-- / div thumbnail -->
           </div>  <!-- /div col-4 item products -->
-        @endforeach      
+        @endforeach   
+         <div class="clearfix">
+        </div>
 
-        </div> <!-- /col 12 -->     
+        </div> <!-- /col 12 -->   
+        </div>  
+
+        <img src="uploads/products/poster-footer.jpg" alt="Hosting Miễn Phí" border="0" width="100%" height="300" />
+          
 @endsection

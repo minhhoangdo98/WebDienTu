@@ -2,7 +2,7 @@
 @section('content')
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h3 class="panel-title">
-      <span class="glyphicon glyphicon-home"><a href="{!!url('/')!!}" title=""> Home</a></span> 
+      <span class="glyphicon glyphicon-home" style="font-size: 18px;"><a href="{!!url('/')!!}" title=""> Home</a></span> 
       <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span><a href="{!!url('/pc')!!}" title=""> Máy tính bàn (PC)</a>
       <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span> <a href="#" title="">{!!$data->name!!}</a>
     </h3>              
@@ -71,18 +71,14 @@
                     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                       <div class="panel panel-info" style="margin: 0;">
                         <div class="panel-heading" style="padding:5px;">
-                          <h3 class="panel-title">Khuyễn mãi - Chính sách</h3>
+                          <h3 class="panel-title">Khuyễn mãi </h3>
                         </div>
                         <div class="panel-body">
                           <div class="khuyenmai">
-                            @if ($data->promo1!='')
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>{!!$data->promo1!!}</li>
-                            @elseif($data->promo2!='')
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>{!!$data->promo2!!}</li>
-                            @elseif ($data->promo3!='')
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>{!!$data->promo3!!}</li>
-                            @endif 
-                              <li><span class="glyphicon glyphicon-ok-sign"></span>Cài đặt phần miềm, tải nhạc - ứng dụng miến phí</li>                                                       
+                            <li><span class="glyphicon glyphicon-ok-sign"></span> {!!$data->promo1!!}</li>                           
+                              <li><span class="glyphicon glyphicon-ok-sign"></span> {!!$data->promo2!!}</li>                  
+                              <li><span class="glyphicon glyphicon-ok-sign"></span> {!!$data->promo3!!}</li>                       
+                              <li><span class="glyphicon glyphicon-ok-sign"></span> Cài đặt phần miềm - ứng dụng miến phí</li>                                                       
                           </div>                         
                         </div>
                       </div>
@@ -112,7 +108,7 @@
                     <table class="table table-hover">
                       <thead>
                         <tr>
-                          <th colspan="2">CẤU HÌNH CHI TIẾT SẢN PHẨM: <strong>{!!$slug!!}</strong> </th>
+                          <th colspan="2">CẤU HÌNH CHI TIẾT SẢN PHẨM:</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -197,14 +193,14 @@
       <!-- panel inffo 1 -->
       <div class="panel panel-info">
         <div class="panel-heading">
-          <h3 class="panel-title text-center">Sản phẩm khác</h3>
+          <h3 class="panel-title text-center">Sản phẩm cùng loại</h3>
         </div>
         <div class="panel-body no-padding">
           <?php 
           $mobile = DB::table('products')
                 ->join('category', 'products.cat_id', '=', 'category.id')
                 ->join('pro_details', 'pro_details.pro_id', '=', 'products.id')
-                ->where('category.parent_id','=','1')
+                ->where('category.parent_id','=','19')
                 ->select('products.*','pro_details.cpu','pro_details.ram','pro_details.screen','pro_details.vga','pro_details.storage','pro_details.exten_memmory','pro_details.cam1','pro_details.cam2','pro_details.sim','pro_details.connect','pro_details.pin','pro_details.os','pro_details.note')
                 ->orderBy('products.created_at', 'desc')
                 ->paginate(2); 
@@ -265,11 +261,11 @@
         <h3 class="panel-title text-center">Sự kiện HOT</h3>
       </div>
       <div class="panel-body no-padding">
-       <a href="#" title=""><img src="{!!url('images/slides/thumbs/qc1.png')!!}" alt="" width="100%" height="100%"> </a> <br>
-        <a href="#" title=""><img src="{!!url('images/slides/thumbs/qc2.png')!!}" alt="" width="100%" height="100%"> </a> <br>
-        <a href="#" title=""><img src="{!!url('images/slides/thumbs/qc3.png')!!}" alt="" width="100%" height="100%"> </a>
-        <a href="#" title=""><img src="{!!url('images/slides/thumbs/qc4.png')!!}" alt="" width="100%" height="100%"> </a>
-        <a href="#" title=""><img src="{!!url('images/slides/thumbs/qc5.png')!!}" alt="" width="100%" height="100%"> </a>
+      <a href="#" title=""><img src="{!!url('public/images/slides/thumbs/qc1.png')!!}" alt="" width="100%" height="100%"> </a> <br>
+        <a href="#" title=""><img src="{!!url('public/images/slides/thumbs/qc2.png')!!}" alt="" width="100%" height="100%"> </a> <br>
+        <a href="#" title=""><img src="{!!url('public/images/slides/thumbs/qc3.png')!!}" alt="" width="100%" height="100%"> </a>
+        <a href="#" title=""><img src="{!!url('public/images/slides/thumbs/qc4.png')!!}" alt="" width="100%" height="100%"> </a>
+        <a href="#" title=""><img src="{!!url('public/images/slides/thumbs/qc5.png')!!}" alt="" width="100%" height="100%"> </a>
       </div>
     </div> <!-- /panel info 2  quản cáo 1          -->        
      <!-- /panel info 2  quản cáo 1          -->  

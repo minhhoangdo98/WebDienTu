@@ -3,8 +3,8 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h3 class="panel-title">
       <span class="glyphicon glyphicon-home"><a href="#" title=""> Home</a></span> 
-      <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span><a href="#" title=""> Tin Tức</a>
-      <span class="glyphicon glyphicon-chevron-right" style="font-size: 11px;"></span> <a href="#" title="">{!!$slug!!}</a>
+      <span class="glyphicon glyphicon-chevron-right" style="font-size: 18px;"></span><a href="#" title=""> Tin Tức</a>
+      <span class="glyphicon glyphicon-chevron-right" style="font-size: 18px;"></span> <a href="#" title="">{!!$slug!!}</a>
     </h3>              
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 no-padding">              
       <div class="row">
@@ -15,8 +15,8 @@
               <!-- hot new content -->
                 <div class="col-lg-12">
                   <h3 class="title-h3"><a href="#" title="{!!$data->title!!}">{!!$data->title!!}</a></h3>
-                   <p class="time-views"> <span> Đăng bởi: </span> <strong>{!!$data->author!!}</strong> <strong> - 106 lượt xem</strong></p>
-                  <img class="img-new" src="{!!url('public/uploads/news/'.$data->images)!!}" alt="{!!$data->images!!}" >                  
+                   <p class="time-views"> <span> Đăng bởi: </span> <strong>{!!$data->author!!}</strong> <strong> - 100 lượt xem</strong></p>
+                  <img class="img-new" src="{!!url('uploads/news/'.$data->images)!!}" alt="{!!$data->images!!}" >                  
                   <p class="summary-content">
                   <div class="panel-body">
                     <p class="text-left" style=" padding-bottom: 0px;">
@@ -45,7 +45,7 @@
                 @foreach($data as $row)
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                      <a href="{!!url('/tin-tuc/'.$row->id.'-'.$row->slug)!!}" title="{!!$row->title!!}"><img src="{!!url('public/uploads/news/'.$row->images)!!}" alt="{!!$row->title!!}" width="90%" height="99%"> </a>
+                      <a href="{!!url('/tin-tuc/'.$row->id.'-'.$row->slug)!!}" title="{!!$row->title!!}"><img src="{!!url('uploads/news/'.$row->images)!!}" alt="{!!$row->title!!}" width="90%" height="99%"> </a>
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                       <h4><a href="{!!url('/tin-tuc/'.$row->id.'-'.$row->slug)!!}"" title="{!!$row->title!!}">{!!$row->title!!}</a></h4>
@@ -85,7 +85,7 @@
             <div class="thumbnail mobile">              
               <div class="bt">
                 <div class="image-m pull-left">
-                  <img class="img-responsive" src="{!!url('public/uploads/products/'.$row->images)!!}" alt="{!!$row->name!!}">
+                  <img class="img-responsive" src="{!!url('uploads/products/'.$row->images)!!}" alt="{!!$row->name!!}">
                 </div>
                 <div class="intro pull-right">
                   <h1><small class="title-mobile">{!!$row->name!!}</small></h1>
